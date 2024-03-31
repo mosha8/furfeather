@@ -1,0 +1,6 @@
+.prettierignore
+build
+.next
+yarn.lock
+Dockerfile
+public
