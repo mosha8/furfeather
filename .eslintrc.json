@@ -1,8 +1,27 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended",
     "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "testing-library",
+    "@typescript-eslint",
+    "no-relative-import-paths"
+  ],
+  "ignorePatterns": [
+    "next.config.js",
+    ".eslintrc.js",
+    "**/*.d.ts",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "public/*"
   ]
 }
