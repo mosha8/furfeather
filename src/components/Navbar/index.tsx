@@ -1,23 +1,16 @@
-import { FC } from 'react';
-import Button from '@components/Button';
+import Logo from '../Logo';
+import NavItems from './components/NavItems';
+import IconKebab from './components/IconKebab';
 
-const Navbar: FC = () => {
+const Navbar = () => {
   return (
-    <div className="flex gap-6 leading-relaxed">
-      <Button color="primary" variant="text">
-        Projects
-      </Button>
-      <Button color="primary" variant="text">
-        Services
-      </Button>
-      <Button color="primary" variant="text">
-        About
-      </Button>
-      <Button color="primary" variant="text">
-        Handbook
-      </Button>
-    </div>
+    <nav className="w-full h-20 flex justify-between items-center py-4 px-12 fixed top-0 z-10 border-b border-b-medium">
+      <Logo />
+      <div className="flex items-center gap-8">
+        <NavItems />
+        <IconKebab />
+      </div>
+    </nav>
   );
 };
-
 export default Navbar;
