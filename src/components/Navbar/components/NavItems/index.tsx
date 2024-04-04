@@ -9,12 +9,22 @@ const NavItems: FC<NavItemsProps> = () => {
   const items = useMemo(
     () =>
       NavbarItems?.map(({ href, title }, index) => (
-        <Button color="primary" variant="text" href={href} key={index}>
+        <Button
+          color="primary"
+          variant="text"
+          href={href}
+          key={index}
+          className="scale-90 md:scale-100"
+        >
           {title}
         </Button>
       )),
     []
   );
-  return <div className="flex gap-6 leading-relaxed font-medium">{items}</div>;
+  return (
+    <div className="hidden md:flex gap-6 leading-relaxed font-medium">
+      {items}
+    </div>
+  );
 };
 export default NavItems;

@@ -26,6 +26,10 @@ picture {
   display: block;
 }
 
+a {
+  display: inline-block;
+}
+
 @layer components {
   .link-underline-sm {
     @apply after:absolute after:bottom-1 after:left-2 after:w-0 hover:after:w-[calc(100%-1rem)] after:h-1.5 hover:after:bg-light after:transition-all after:duration-300 after:delay-100;
