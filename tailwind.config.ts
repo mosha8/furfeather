@@ -5,11 +5,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: 'rgba(237,237,237)',
-        darkest: '#171717',
+        primary: '#EDEDED',
+        background: '#171717',
+        secondary: '#171717',
         dark: '#000A28',
-        medium: 'rgba(0,10,40,0.6)',
-        light: 'rgba(160,160,162)',
+        medium: '#2E2E2E', // decorative borders
+        light: '#A0A0A2', // non-decorative borders
+        navItemUnderline: '#4E4E4E',
+      },
+      lineHeight: {
+        nav: '26px',
+      },
+      height: {
+        '1.5': '1.5px',
       },
     },
   },
