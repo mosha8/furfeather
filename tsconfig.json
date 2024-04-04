@@ -29,7 +29,8 @@
     "paths": {
       "@/*": ["src/"],
       "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@configs/*": ["src/configs/*"]
     }
   },
   "include": [
