@@ -20,6 +20,7 @@ const Button: FC<ButtonProps> = ({
   const isVariantOutlined = variant === 'outlined';
   const isVariantText = variant === 'text';
   const isColorPrimary = color === 'primary';
+  const isColorSecondary = color === 'secondary';
   const isSizeMedium = size === 'medium';
   const isSizeSmall = size === 'small';
   const Component = href ? (externalUrl ? 'a' : Link) : 'button';
@@ -43,8 +44,9 @@ const Button: FC<ButtonProps> = ({
         isVariantText && [
           'relative',
           isColorPrimary && 'text-primary',
+          isColorSecondary && 'text-light',
           isSizeMedium && 'link-underline-md',
-          isSizeSmall && 'link-underline-sm',
+          isSizeSmall && 'text-sm link-underline-sm',
         ],
         disabled && ['cursor-not-allowed'],
         className
