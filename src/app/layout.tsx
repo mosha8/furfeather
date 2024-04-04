@@ -1,17 +1,9 @@
 import type { Metadata } from 'next';
-// import { Inter } from 'next/font/google';
-import localFont from 'next/font/local';
-import Header from '@components/Header';
-import './app.css';
 import { ReactNode } from 'react';
 
-// Font files can be colocated inside of `app`
-const myFont = localFont({
-  src: '../assets/fonts/significa-medium.woff2',
-  display: 'swap',
-});
-
-// const inter = Inter({ subsets: ['latin'] });
+import Navbar from '@components/Navbar';
+import './globals.css';
+import Footer from '@components/Footer';
 
 export const metadata: Metadata = {
   title: 'Significa',
@@ -24,10 +16,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={myFont.className}>
-      <body className="bg-darkest">
-        <Header />
-        {children}
+    <html lang="en">
+      <body className="bg-background">
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
