@@ -34,7 +34,7 @@ const Footer = () => {
                 )}
               />
             </LinkIcon>
-            <SloganParagraph isFooterSlogan={true} />
+            <SloganParagraph size="medium" />
           </div>
         </div>
         <CopyRight />
