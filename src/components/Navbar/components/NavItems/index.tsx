@@ -9,13 +9,7 @@ const NavItems: FC<NavItemsProps> = () => {
   const items = useMemo(
     () =>
       NavbarItems?.map(({ href, title }, index) => (
-        <Button
-          color="primary"
-          variant="text"
-          href={href}
-          key={index}
-          className="scale-90 md:scale-100"
-        >
+        <Button color="primary" variant="text" href={href} key={index}>
           {title}
         </Button>
       )),
