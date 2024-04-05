@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 
-import Navbar from '@components/Navbar';
 import './globals.css';
 import Footer from '@components/Footer';
+import Header from '@components/Header';
 
 export const metadata: Metadata = {
-  title: 'Significa',
-  description: 'Significa.co',
+  title: 'BugAnt',
+  description: 'BugAnt.com',
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-background">
-        <Navbar />
+        <Header />
         <main>{children}</main>
         <Footer />
       </body>

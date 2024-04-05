@@ -6,8 +6,8 @@ import classNames from 'classnames';
 
 const Navbar = () => {
   return (
-    <nav className="w-full h-20 flex justify-between items-center py-4 px-12 fixed top-0 z-10 border-b border-b-medium">
-      <LinkIcon>
+    <nav className="flex justify-between items-center">
+      <LinkIcon href="/">
         <BugAntIcon
           className={classNames(
             'fill-primary',
