@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { BugAntIcon } from '@heroicons/react/24/solid';
 import LinkIcon from '@components/LinkIcon';
-import SloganParagraph from '@components/SloganParagraph';
+import Tagline from '@components/Tagline';
 import CopyRight from './components/CopyRight';
 import Menus from './components/Menus';
 const Footer = () => {
@@ -34,7 +34,7 @@ const Footer = () => {
                 )}
               />
             </LinkIcon>
-            <SloganParagraph size="medium" />
+            <Tagline size="medium" />
           </div>
         </div>
         <CopyRight />

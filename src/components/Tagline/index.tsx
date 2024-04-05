@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import { SloganParagraphProps } from './@types';
+import { TaglineProps } from './@types';
 
-const SloganParagraph: FC<SloganParagraphProps> = ({ size = 'large' }) => {
+const Tagline: FC<TaglineProps> = ({ size = 'large' }) => {
   // Variables
   const isSloganLarge = size === 'large';
   const isSloganMedium = size === 'medium';
@@ -22,4 +22,4 @@ const SloganParagraph: FC<SloganParagraphProps> = ({ size = 'large' }) => {
     </p>
   );
 };
-export default SloganParagraph;
+export default Tagline;
