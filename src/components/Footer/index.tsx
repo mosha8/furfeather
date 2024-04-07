@@ -9,7 +9,7 @@ const Footer = () => {
     <footer
       className={classNames(
         'w-full',
-        'px-12 pt-20 pb-3',
+        'md:px-20 px-12 pt-20 pb-3',
         'border-t border-t-medium'
       )}
     >
@@ -17,10 +17,10 @@ const Footer = () => {
         <div
           className={classNames(
             'w-full gap-y-8',
-            'flex flex-col-reverse  md:flex-row-reverse md:justify-between'
+            'flex flex-col-reverse md:flex-row-reverse md:justify-between'
           )}
         >
-          <div className="flex-1">
+          <div>
             <Menus />
           </div>
           <div className="flex flex-col flex-1 gap-y-32">

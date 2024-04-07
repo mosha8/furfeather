@@ -4,7 +4,7 @@ import config from '@configs/app.json';
 const { FooterMenu } = config;
 const Menus = () => {
   return (
-    <div className="w-full flex space-x-16 justify-end">
+    <div className="flex md:space-x-16 justify-center md:justify-end">
       {FooterMenu.map(({ label, values }) => {
         return (
           <div className="flex flex-col" key={`footer-${label}`}>

@@ -9,16 +9,32 @@ const Tagline: FC<TaglineProps> = ({ size = 'large' }) => {
   return (
     <p
       className={classNames(
-        'text-primary leading-snug',
+        '!text-primary flex flex-col',
         isSloganMedium && 'hidden md:flex md:flex-col text-3xl font-semibold',
-        isSloganLarge && 'font-bold text-6xl'
+        isSloganLarge && ['font-bold text-4xl', 'md:text-5xl', 'lg:text-6xl']
       )}
     >
-      Think, Design.
-      <br />
-      Develop, Release.
-      <br />
-      Repeat.
+      <strong
+        className={classNames(
+          isSloganLarge && 'transition-all duration-300 ease-in delay-500'
+        )}
+      >
+        Think, Design.
+      </strong>
+      <strong
+        className={classNames(
+          isSloganLarge && 'transition-all duration-300 ease-in delay-1000'
+        )}
+      >
+        Develop, Release.
+      </strong>
+      <strong
+        className={classNames(
+          isSloganLarge && 'transition-all duration-300 ease-in delay-[1500ms]'
+        )}
+      >
+        Repeat.
+      </strong>
     </p>
   );
 };
