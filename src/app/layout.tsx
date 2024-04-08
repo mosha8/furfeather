@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 
-import './globals.css';
-import Footer from '@components/Footer';
-import Header from '@components/Header';
+import '@styles/globals.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 export const metadata: Metadata = {
   title: 'BugAnt',
