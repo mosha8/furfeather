@@ -1,4 +1,4 @@
-import Button from '@components/Button';
+import Link from '@components/Link';
 import config from '@configs/app.json';
 
 const { FooterMenu } = config;
@@ -12,9 +12,9 @@ const Menus = () => {
             <ul className="flex flex-col gap-y-2">
               {values.map(({ title, href }) => (
                 <li key={`footer-sub-menu-${title}`}>
-                  <Button href={href} variant="text">
+                  <Link href={href} variant="text">
                     {title}
-                  </Button>
+                  </Link>
                 </li>
               ))}
             </ul>

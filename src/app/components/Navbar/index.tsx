@@ -1,7 +1,6 @@
-import { BugAntIcon } from '@heroicons/react/24/solid';
-import LinkIcon from '../LinkIcon';
+import { BugAntIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/solid';
+import LinkIcon from '../../../components/LinkIcon';
 import NavItems from './components/NavItems';
-import IconKebab from './components/IconKebab';
 import classNames from 'classnames';
 
 const Navbar = () => {
@@ -19,7 +18,13 @@ const Navbar = () => {
       </LinkIcon>
       <div className="flex items-center gap-8">
         <NavItems />
-        <IconKebab />
+        <div className="border border-light w-16 h-12 rounded-xl flex items-center justify-center">
+          <EllipsisHorizontalIcon
+            width={16}
+            height={16}
+            className="fill-primary"
+          />
+        </div>
       </div>
     </nav>
   );

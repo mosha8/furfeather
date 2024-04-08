@@ -1,6 +1,6 @@
 import { FC, useMemo } from 'react';
-import Button from '@components/Button';
-import { NavItemsProps } from '@components/Navbar/@types';
+import Link from '@components/Link';
+import { NavItemsProps } from 'src/app/components/Navbar/@types';
 import config from '@configs/app.json';
 
 const { NavbarItems } = config;
@@ -9,9 +9,9 @@ const NavItems: FC<NavItemsProps> = () => {
   const items = useMemo(
     () =>
       NavbarItems?.map(({ href, title }, index) => (
-        <Button color="primary" variant="text" href={href} key={index}>
+        <Link color="primary" variant="text" href={href} key={index}>
           {title}
-        </Button>
+        </Link>
       )),
     []
   );
