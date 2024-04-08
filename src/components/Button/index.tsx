@@ -1,34 +1,29 @@
 import { FC } from 'react';
-import Link from 'next/link';
 import { ButtonProps } from './@types';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 const Button: FC<ButtonProps> = ({
-  variant = 'contained',
-  color = 'primary',
-  size = 'medium',
+  variant,
+  color,
+  size,
   className,
-  href,
-  externalUrl,
-  target = '_self',
-  disabled,
   onClick,
+  disabled,
   children,
 }) => {
-  // Variables
   const isVariantContained = variant === 'contained';
   const isVariantOutlined = variant === 'outlined';
-  const isVariantText = variant === 'text';
   const isColorPrimary = color === 'primary';
-  const isColorSecondary = color === 'secondary';
-  const isSizeMedium = size === 'medium';
+  // const isColorSecondary = color === 'secondary';
+  // const isColorSuccess = color === 'success';
+  // const isColorError = color === 'error';
   const isSizeSmall = size === 'small';
-  const Component = href ? (externalUrl ? 'a' : Link) : 'button';
+  const isSizeMedium = size === 'medium';
 
   return (
-    <Component
-      className={classnames(
-        'rounded-md',
+    <button
+      className={classNames(
+        'rounded-md max-w-fit',
         isSizeSmall && 'px-2 py-1',
         isSizeMedium && 'px-4 py-2',
         (isVariantContained || isVariantOutlined) &&
@@ -41,25 +36,14 @@ const Button: FC<ButtonProps> = ({
           'text-sm leading-4 border-2 border-solid text-primary',
           isColorPrimary && 'border-light',
         ],
-        isVariantText && [
-          'relative',
-          isColorPrimary && 'text-primary',
-          isColorSecondary && 'text-light',
-          isSizeMedium && 'link-underline-md',
-          isSizeSmall && 'text-sm link-underline-sm',
-        ],
-        disabled && ['cursor-not-allowed'],
+        disabled && 'cursor-not-allowed',
         className
       )}
-      disabled={!!disabled}
-      href={href as string}
-      target={target}
-      // @ts-expect-error @typescript-eslint/ban-ts-comment
       onClick={onClick}
+      disabled={!!disabled}
     >
       {children}
-    </Component>
+    </button>
   );
 };
-
 export default Button;

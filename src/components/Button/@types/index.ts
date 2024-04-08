@@ -1,15 +1,13 @@
-import type { ButtonHTMLAttributes, MouseEvent, ReactNode } from 'react';
-export type ButtonVariant = 'text' | 'outlined' | 'contained';
-export type ButtonSize = 'small' | 'medium';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
+export type ButtonVariant = 'contained' | 'outlined';
 export type ButtonColor = 'primary' | 'secondary' | 'success' | 'error';
+export type ButtonSize = 'small' | 'medium';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
-  variant?: ButtonVariant;
-  color?: ButtonColor;
-  size?: ButtonSize;
-  href?: string;
-  externalUrl?: string;
-  target?: '_self' | '_blank';
-  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  variant: ButtonVariant;
+  color: ButtonColor;
+  size: ButtonSize;
+  className?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   disabled?: boolean;
+  children?: ReactNode;
 }
