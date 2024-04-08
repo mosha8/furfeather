@@ -63,5 +63,79 @@
       "description": "An app to empower women in their fertility journey.",
       "icon": "https://a.storyblok.com/f/198185/3840x3840/18f579a475/diathumb.jpeg/m/200x160/"
     }
+  ],
+  "ProjectsImageUrls": [
+    {
+      "href": "/",
+      "title": "Passporte Natura 2000.",
+      "description": "How we gamified exploring the world.",
+      "icon": "https://a.storyblok.com/f/198185/1344x1008/561f9ba005/pnthumb1.jpg/m/1440x1080/",
+      "awards": [
+        {
+          "title": "iF Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/9f64598050/ifdesign.webp/m/120x0/"
+        },
+        {
+          "title": "European Design",
+          "icon": "https://a.storyblok.com/f/198185/112x88/c5732814c2/european-design-nominee-gold.png/m/120x0/"
+        },
+        {
+          "title": "German Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/3a615f33cf/gda-badge.png/m/120x0/"
+        }
+      ]
+    },
+    {
+      "href": "/",
+      "title": "Dia.",
+      "description": "An app to empower women in their fertility journey.",
+      "icon": "https://a.storyblok.com/f/198185/1600x1200/80012553aa/dia-thumb-03.jpg/m/1440x1080/",
+      "awards": [
+        {
+          "title": "iF Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/9f64598050/ifdesign.webp/m/120x0/"
+        },
+        {
+          "title": "European Design",
+          "icon": "https://a.storyblok.com/f/198185/112x88/c5732814c2/european-design-nominee-gold.png/m/120x0/"
+        },
+        {
+          "title": "Good Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/26c6561039/gooddesignlogo.png/m/120x0/"
+        },
+        {
+          "title": "Red Dot",
+          "icon": "https://a.storyblok.com/f/198185/168x132/696778595b/reddot.webp/m/120x0/"
+        },
+        {
+          "title": "German Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/3a615f33cf/gda-badge.png/m/120x0/"
+        }
+      ]
+    },
+    {
+      "href": "/",
+      "title": "Zoko.",
+      "description": "How we helped Zoko become a productivity powerhouse.",
+      "icon": "https://a.storyblok.com/f/198185/1601x1201/540dfeb209/zokothumb-1.jpg/m/1440x1080/",
+      "awards": [
+        {
+          "title": "iF Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/9f64598050/ifdesign.webp/m/120x0/"
+        },
+        {
+          "title": "Good Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/26c6561039/gooddesignlogo.png/m/120x0/"
+        },
+        {
+          "title": "Red Dot",
+          "icon": "https://a.storyblok.com/f/198185/168x132/696778595b/reddot.webp/m/120x0/"
+        },
+        {
+          "title": "German Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/3a615f33cf/gda-badge.png/m/120x0/"
+        }
+      ]
+    }
   ]
 }
