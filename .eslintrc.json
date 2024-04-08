@@ -14,7 +14,8 @@
   "plugins": [
     "testing-library",
     "@typescript-eslint",
-    "no-relative-import-paths"
+    "no-relative-import-paths",
+    "react"
   ],
   "ignorePatterns": [
     "next.config.js",

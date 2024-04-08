@@ -30,7 +30,8 @@
       "@/*": ["src/"],
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
-      "@configs/*": ["src/configs/*"]
+      "@configs/*": ["src/configs/*"],
+      "@styles/*": ["src/styles/*"]
     }
   },
   "include": [
