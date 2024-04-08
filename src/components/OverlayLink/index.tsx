@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { OverlayLinkProps } from './@types';
 import Image from 'next/image';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import classNames from 'classnames';
 
 const OverlayLink: FC<OverlayLinkProps> = ({
@@ -11,18 +11,16 @@ const OverlayLink: FC<OverlayLinkProps> = ({
   icon,
   children,
 }) => {
-  // Variables
-  const isIconUrlString = typeof icon === 'string' || icon instanceof String;
   return (
-    <Link
+    <NextLink
       href={href}
       className={classNames(
-        'max-h-[80px] max-w-[320px] rounded-xl',
+        'max-h-[80px] w-[320px] rounded-xl',
         'flex flex-row-reverse flex-1 justify-end',
         'hover:scale-110 hover:transition-all hover:duration-300 hover:delay-100 hover:bg-overlayLinkHover'
       )}
     >
-      <div className="w-[220px] px-4 py-1">
+      <div className="px-4 py-1">
         <h5 className="text-primary font-semibold leading-4 text-sm">
           {title}
         </h5>
@@ -30,22 +28,15 @@ const OverlayLink: FC<OverlayLinkProps> = ({
           {description}
         </p>
       </div>
-      {isIconUrlString ? (
-        <div className="w-[77px]">
-          <Image
-            src={String(icon)}
-            alt="icon_card"
-            width={77}
-            height={61}
-            className="rounded-xl"
-          />
-        </div>
-      ) : (
-        icon
-      )}
-
+      <Image
+        src={String(icon)}
+        alt="icon_card"
+        width={100}
+        height={80}
+        className="rounded-xl"
+      />
       {children}
-    </Link>
+    </NextLink>
   );
 };
 
