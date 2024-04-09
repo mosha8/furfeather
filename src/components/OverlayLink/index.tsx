@@ -15,7 +15,7 @@ const OverlayLink: FC<OverlayLinkProps> = ({
     <NextLink
       href={href}
       className={classNames(
-        'max-h-[80px] w-[320px] rounded-xl',
+        'max-h-[80px] w-[300px] rounded-xl',
         'flex flex-row-reverse flex-1 justify-end',
         'hover:scale-110 hover:transition-all hover:duration-300 hover:delay-100 hover:bg-overlayLinkHover'
       )}

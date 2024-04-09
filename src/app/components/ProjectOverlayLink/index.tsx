@@ -15,8 +15,8 @@ const ProjectOverlayLink: FC<ProjectOverlayLinkProps> = ({
   return (
     <NextLink
       className={classNames(
-        'w-full max-h-[830px] mb-8',
-        'flex flex-row-reverse group',
+        'flex flex-col gap-y-8 group',
+        'lg:flex lg:flex-row-reverse',
         'hover:transition-all hover:duration-300 hover:delay-100 hover:bg-overlayLinkHover hover:rounded-xl hover:pl-8'
       )}
       href={href}
@@ -31,8 +31,8 @@ const ProjectOverlayLink: FC<ProjectOverlayLinkProps> = ({
           className="rounded-xl hover:delay-200"
         />
       </div>
-      <div className="flex flex-col py-4 flex-1">
-        <div className="flex flex-col gap-y-16 h-full">
+      <div className="flex flex-col py-4 flex-1 gap-y-8 lg:justify-between">
+        <div className="flex flex-col gap-y-16">
           <div className="flex flex-col gap-y-4">
             <p className="text-3xl">
               {title}
