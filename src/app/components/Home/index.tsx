@@ -10,7 +10,7 @@ const Home = () => {
     <div
       className={classNames(
         'text-primary py-4 px-8 my-8',
-        'w-full flex flex-col gap-y-64',
+        'w-full flex flex-col gap-y-16',
         'md:py-12 md:px-16',
         'lg:px-20 lg:gap-y-32'
       )}
@@ -32,17 +32,24 @@ const Home = () => {
           />
         ))}
       </section>
-      <section className={classNames('w-full flex flex-col gap-y-20')}>
-        {ProjectsImageUrls.map(({ href, title, description, icon, awards }) => (
-          <ProjectOverlayLink
-            key={`project-${title.replaceAll(' ', '-')}`}
-            href={href}
-            title={title}
-            description={description}
-            awards={awards}
-            icon={icon}
-          />
-        ))}
+      <section className={classNames('w-full space-y-8 lg:space-y-16')}>
+        <h3 className={classNames('font-semibold text-4xl lg:text-5xl')}>
+          Selected work.
+        </h3>
+        <div className="flex flex-col gap-y-16">
+          {ProjectsImageUrls.map(
+            ({ href, title, description, icon, awards }) => (
+              <ProjectOverlayLink
+                key={`project-${title.replaceAll(' ', '-')}`}
+                href={href}
+                title={title}
+                description={description}
+                awards={awards}
+                icon={icon}
+              />
+            )
+          )}
+        </div>
       </section>
     </div>
   );
