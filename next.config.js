@@ -21,6 +21,11 @@ const nextConfig = {
         hostname: 'a.storyblok.com',
         pathname: '/f/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'significa.co',
+        pathname: '/**',
+      },
     ],
   },
 };
