@@ -38,11 +38,11 @@
       ]
     }
   ],
-  "BlogPostsImageUrls": [
+  "BlogPosts": [
     {
       "href": "/",
       "title": "Hey Harper.",
-      "description": "Redesigning the e-commerce experience. ",
+      "description": "Redesigning the e-commerce experience.",
       "icon": "https://a.storyblok.com/f/198185/3200x2400/59afcdf31e/heythumb2.jpg/m/200x160/"
     },
     {
@@ -64,7 +64,7 @@
       "icon": "https://a.storyblok.com/f/198185/3840x3840/18f579a475/diathumb.jpeg/m/200x160/"
     }
   ],
-  "ProjectsImageUrls": [
+  "Projects": [
     {
       "href": "/",
       "title": "Passporte Natura 2000.",
@@ -135,6 +135,17 @@
           "title": "German Design",
           "icon": "https://a.storyblok.com/f/198185/168x132/3a615f33cf/gda-badge.png/m/120x0/"
         }
+      ]
+    }
+  ],
+  "Services": [
+    {
+      "title": "Our services. Design-led digital products.",
+      "description": "There is no room for shortcuts when building a great digital experience. Everything starts with thorough research and iterative experimentation. No stone is left unturned to make data-minded decisions. Then we build from scratch, designing and developing, tailored to what users need.",
+      "icons": [
+        "https://significa.co/_app/immutable/assets/dev.c2a02856.webp",
+        "https://significa.co/_app/immutable/assets/design.e8a886bb.webp",
+        "https://significa.co/_app/immutable/assets/strategy.e14d50fc.webp"
       ]
     }
   ]
