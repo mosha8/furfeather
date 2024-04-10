@@ -3,8 +3,10 @@ import Tagline from '@components/Tagline';
 import classNames from 'classnames';
 import config from '@configs/app.json';
 import ProjectOverlayLink from 'src/app/components/ProjectOverlayLink';
+import Service from '../Service';
+import { randomUUID } from 'crypto';
 
-const { BlogPostsImageUrls, ProjectsImageUrls } = config;
+const { BlogPosts, Projects, Services } = config;
 const Home = () => {
   return (
     <div
@@ -22,7 +24,7 @@ const Home = () => {
           'md:flex-row md:gap-x-12 md:flex-wrap'
         )}
       >
-        {BlogPostsImageUrls.map(({ href, title, description, icon }) => (
+        {BlogPosts.map(({ href, title, description, icon }) => (
           <OverlayLink
             key={`blogPost-overlayLink-${href}`}
             href={href}
@@ -37,19 +39,30 @@ const Home = () => {
           Selected work.
         </h3>
         <div className="flex flex-col gap-y-16">
-          {ProjectsImageUrls.map(
-            ({ href, title, description, icon, awards }) => (
-              <ProjectOverlayLink
-                key={`project-${title.replaceAll(' ', '-')}`}
-                href={href}
-                title={title}
-                description={description}
-                awards={awards}
-                icon={icon}
-              />
-            )
-          )}
+          {Projects.map(({ href, title, description, icon, awards }) => (
+            <ProjectOverlayLink
+              key={`project-${title.replaceAll(' ', '-')}`}
+              href={href}
+              title={title}
+              description={description}
+              awards={awards}
+              icon={icon}
+            />
+          ))}
         </div>
+      </section>
+      <section className={classNames('w-full space-y-8 mt-8')}>
+        <h3 className={classNames('font-semibold text-4xl lg:text-5xl')}>
+          Services.
+        </h3>
+        {Services.map(({ title, description, icons }) => (
+          <Service
+            title={title}
+            description={description}
+            icons={icons}
+            key={`service-${randomUUID()}`}
+          />
+        ))}
       </section>
     </div>
   );
