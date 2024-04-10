@@ -4,6 +4,7 @@ import Image from 'next/image';
 import classNames from 'classnames';
 import NextLink from 'next/link';
 import Button from '@components/Button';
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
 
 const ProjectOverlayLink: FC<ProjectOverlayLinkProps> = ({
   title,
@@ -22,7 +23,7 @@ const ProjectOverlayLink: FC<ProjectOverlayLinkProps> = ({
       href={href}
       color="secondary"
     >
-      <div className="flex flex-1">
+      <div className="flex-1">
         <Image
           src={String(icon)}
           width={900}
@@ -65,6 +66,7 @@ const ProjectOverlayLink: FC<ProjectOverlayLinkProps> = ({
         </div>
         <Button variant="outlined" color="secondary" size="medium">
           View Project
+          <ArrowRightIcon className="ml-2 w-4 h-4" />
         </Button>
       </div>
     </NextLink>
