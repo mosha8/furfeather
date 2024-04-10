@@ -5,8 +5,9 @@ import config from '@configs/app.json';
 import ProjectOverlayLink from 'src/app/components/ProjectOverlayLink';
 import Service from '../Service';
 import { randomUUID } from 'crypto';
+import AboutUs from '../AboutUs';
 
-const { BlogPosts, Projects, Services } = config;
+const { BlogPosts, Projects, Services, AboutUs: AboutUsData } = config;
 const Home = () => {
   return (
     <div
@@ -63,6 +64,12 @@ const Home = () => {
             key={`service-${randomUUID()}`}
           />
         ))}
+      </section>
+      <section className="w-full">
+        <AboutUs
+          title={AboutUsData.title}
+          description={AboutUsData.description}
+        />
       </section>
     </div>
   );
