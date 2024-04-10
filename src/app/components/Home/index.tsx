@@ -20,22 +20,22 @@ const Home = () => {
       <Tagline />
       <section
         className={classNames(
-          'w-full flex flex-col items-start gap-y-6',
-          'md:flex-row md:gap-x-12 md:flex-wrap'
+          'w-full flex flex-col items-start gap-y-8',
+          'md:flex-row md:gap-x-16 md:flex-wrap'
         )}
       >
-        {BlogPosts.map(({ href, title, description, icon }) => (
+        {BlogPosts.map(({ href, title, source, icon }) => (
           <OverlayLink
             key={`blogPost-overlayLink-${href}`}
             href={href}
             title={title}
-            description={description}
+            source={source}
             icon={icon}
           />
         ))}
       </section>
       <section className={classNames('w-full space-y-8 lg:space-y-16')}>
-        <h3 className={classNames('font-semibold text-4xl lg:text-5xl')}>
+        <h3 className={classNames('font-medium text-4xl lg:text-5xl')}>
           Selected work.
         </h3>
         <div className="flex flex-col gap-y-16">
@@ -52,7 +52,7 @@ const Home = () => {
         </div>
       </section>
       <section className={classNames('w-full space-y-8 mt-8')}>
-        <h3 className={classNames('font-semibold text-4xl lg:text-5xl')}>
+        <h3 className={classNames('font-medium text-4xl lg:text-5xl')}>
           Services.
         </h3>
         {Services.map(({ title, description, icons }) => (

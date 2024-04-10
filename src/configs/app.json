@@ -41,26 +41,26 @@
   "BlogPosts": [
     {
       "href": "/",
-      "title": "Hey Harper.",
-      "description": "Redesigning the e-commerce experience.",
+      "title": "Hey Harper. Redesigning the e-commerce experience.",
+      "source": "blog",
       "icon": "https://a.storyblok.com/f/198185/3200x2400/59afcdf31e/heythumb2.jpg/m/200x160/"
     },
     {
       "href": "/",
-      "title": "Small Step, Big Impact.",
-      "description": "Partnered with 1% for the planet.",
+      "title": "Small Step, Big Impact. Partnered with 1% for the planet.",
+      "source": "blog",
       "icon": "https://a.storyblok.com/f/198185/3840x1920/7f28832b1e/1-planet-cover.jpg/m/200x160/"
     },
     {
       "href": "/",
-      "title": "all0",
-      "description": "Supercharging restaurants.",
+      "title": "all0. Supercharging restaurants.",
+      "source": "projects",
       "icon": "https://a.storyblok.com/f/198185/2016x1512/c83505ff60/allo-thumbnail-01.png/m/200x160/"
     },
     {
       "href": "/",
-      "title": "Dia",
-      "description": "An app to empower women in their fertility journey.",
+      "title": "Dia. An app to empower women in their fertility journey.",
+      "source": "projects",
       "icon": "https://a.storyblok.com/f/198185/3840x3840/18f579a475/diathumb.jpeg/m/200x160/"
     }
   ],

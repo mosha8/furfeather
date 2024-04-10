@@ -4,6 +4,6 @@ export interface OverlayLinkProps
   extends LinkHTMLAttributes<HTMLAnchorElement> {
   href: string;
   title: string;
-  description: string;
+  source: string;
   icon: ReactNode | string;
 }

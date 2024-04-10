@@ -31,7 +31,7 @@ const Service: FC<ServiceProps> = ({ title, description, icons }) => {
       </div>
       <div className="flex-1 space-y-16 lg:px-16 py-4">
         <div className="w-full space-y-8">
-          <h5 className="text-2xl font-semibold lg:text-5xl leading-relaxed max-w-96">
+          <h5 className="text-2xl font-medium lg:text-5xl leading-relaxed max-w-96">
             {title}
           </h5>
           <p className="max-w-[600px] font-light text-light lg:text-lg">

@@ -21,6 +21,9 @@ const config: Config = {
       lineHeight: {
         nav: '26px',
       },
+      width: {
+        '105': '420px',
+      },
       height: {
         '1.5': '1.5px',
       },

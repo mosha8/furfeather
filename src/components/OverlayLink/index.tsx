@@ -7,7 +7,7 @@ import classNames from 'classnames';
 const OverlayLink: FC<OverlayLinkProps> = ({
   href,
   title,
-  description,
+  source,
   icon,
   children,
 }) => {
@@ -15,18 +15,19 @@ const OverlayLink: FC<OverlayLinkProps> = ({
     <NextLink
       href={href}
       className={classNames(
-        'max-h-[80px] w-[320px] rounded-xl',
-        'flex flex-row-reverse flex-1 justify-end',
+        'w-[311px] lg:w-105 max-h-[85px]',
+        'rounded-xl',
+        'flex flex-row-reverse justify-end',
         'hover:scale-110 hover:transition-all hover:duration-300 hover:delay-100 hover:bg-overlayLinkHover'
       )}
     >
-      <div className="w-full px-4 py-1">
-        <h5 className="text-primary font-semibold leading-4 text-sm">
+      <div className="flex flex-col justify-between px-4 py-1 flex-1">
+        <h5 className="text-primary font-medium max-w-80 text-sm lg:text-base">
           {title}
         </h5>
-        <p className="text-light pt-2 text-xs lg:text-sm whitespace-nowrap text-ellipsis overflow-x-hidden max-w-[180px] lg:max-w-[250px]">
-          {description}
-        </p>
+        <span className="text-light pt-2 text-xs lg:text-sm">
+          From our {source}
+        </span>
       </div>
       <Image
         src={String(icon)}
