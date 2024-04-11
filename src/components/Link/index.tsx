@@ -24,7 +24,7 @@ const Link: FC<LinkProps> = ({
   return (
     <Component
       className={classnames(
-        'rounded-md',
+        'w-fit rounded-md',
         isSizeSmall && 'px-2 py-1',
         isSizeMedium && 'px-4 py-2',
         (isVariantContained || isVariantOutlined) &&

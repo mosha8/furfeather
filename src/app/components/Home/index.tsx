@@ -1,11 +1,13 @@
-import OverlayLink from '@components/OverlayLink';
-import Tagline from '@components/Tagline';
-import classNames from 'classnames';
-import config from '@configs/app.json';
-import ProjectOverlayLink from 'src/app/components/ProjectOverlayLink';
-import Service from '../Service';
 import { randomUUID } from 'crypto';
+import classNames from 'classnames';
+import LinkBox from '@components/LinkBox';
+import Tagline from '@components/Tagline';
+import config from '@configs/app.json';
+import ProjectLinkBox from 'src/app/components/ProjectLinkBox';
+import Service from '../Service';
 import AboutUs from '../AboutUs';
+import Support from '../Support';
+import Blog from '../Blog';
 
 const { BlogPosts, Projects, Services, AboutUs: AboutUsData } = config;
 const Home = () => {
@@ -26,7 +28,7 @@ const Home = () => {
         )}
       >
         {BlogPosts.map(({ href, title, source, icon }) => (
-          <OverlayLink
+          <LinkBox
             key={`blogPost-overlayLink-${href}`}
             href={href}
             title={title}
@@ -35,13 +37,18 @@ const Home = () => {
           />
         ))}
       </section>
-      <section className={classNames('w-full space-y-8 lg:space-y-16')}>
+      <section
+        className={classNames(
+          'w-full space-y-8 lg:space-y-16',
+          'border-t border-medium pt-16'
+        )}
+      >
         <h3 className={classNames('font-medium text-4xl lg:text-5xl')}>
           Selected work.
         </h3>
         <div className="flex flex-col gap-y-16">
           {Projects.map(({ href, title, description, icon, awards }) => (
-            <ProjectOverlayLink
+            <ProjectLinkBox
               key={`project-${title.replaceAll(' ', '-')}`}
               href={href}
               title={title}
@@ -52,7 +59,12 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <section className={classNames('w-full space-y-8 mt-8')}>
+      <section
+        className={classNames(
+          'w-full space-y-8 mt-8',
+          'border-t border-medium pt-16'
+        )}
+      >
         <h3 className={classNames('font-medium text-4xl lg:text-5xl')}>
           Services.
         </h3>
@@ -65,11 +77,17 @@ const Home = () => {
           />
         ))}
       </section>
-      <section className="w-full">
+      <section className="w-full border-t border-medium pt-16">
         <AboutUs
           title={AboutUsData.title}
           description={AboutUsData.description}
         />
+      </section>
+      <section className="w-full border-y border-medium">
+        <Support />
+      </section>
+      <section className="w-full">
+        <Blog />
       </section>
     </div>
   );
