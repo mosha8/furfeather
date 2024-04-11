@@ -1,16 +1,10 @@
 import { FC } from 'react';
-import { OverlayLinkProps } from './@types';
+import { LinkBoxProps } from './@types';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import classNames from 'classnames';
 
-const OverlayLink: FC<OverlayLinkProps> = ({
-  href,
-  title,
-  source,
-  icon,
-  children,
-}) => {
+const LinkBox: FC<LinkBoxProps> = ({ href, title, source, icon, children }) => {
   return (
     <NextLink
       href={href}
@@ -41,4 +35,4 @@ const OverlayLink: FC<OverlayLinkProps> = ({
   );
 };
 
-export default OverlayLink;
+export default LinkBox;

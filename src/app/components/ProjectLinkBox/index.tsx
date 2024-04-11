@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { ProjectOverlayLinkProps } from './@types';
+import { ProjectLinkBoxProps } from './@types';
 import Image from 'next/image';
 import classNames from 'classnames';
 import NextLink from 'next/link';
 import Button from '@components/Button';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 
-const ProjectOverlayLink: FC<ProjectOverlayLinkProps> = ({
+const ProjectLinkBox: FC<ProjectLinkBoxProps> = ({
   title,
   description,
   href,
@@ -72,4 +72,4 @@ const ProjectOverlayLink: FC<ProjectOverlayLinkProps> = ({
     </NextLink>
   );
 };
-export default ProjectOverlayLink;
+export default ProjectLinkBox;

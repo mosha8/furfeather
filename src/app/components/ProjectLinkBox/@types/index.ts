@@ -1,6 +1,6 @@
 import { ReactNode, AnchorHTMLAttributes } from 'react';
 export type ProjectOverlayLinkAwards = { title: string; icon: string };
-export interface ProjectOverlayLinkProps
+export interface ProjectLinkBoxProps
   extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   title: string;
