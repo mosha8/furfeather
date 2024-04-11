@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Link from '@components/Link';
 import { CardProps } from './@types';
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
 
 const Card: FC<CardProps> = ({ title, description, label, href, children }) => {
   return (
@@ -18,6 +19,7 @@ const Card: FC<CardProps> = ({ title, description, label, href, children }) => {
       {href && label ? (
         <Link variant="outlined" size="medium" href={href}>
           {label}
+          <ArrowRightIcon className="ml-2 w-4 h-4" />
         </Link>
       ) : null}
       {children}
