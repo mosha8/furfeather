@@ -152,5 +152,25 @@
   "AboutUs": {
     "title": "About ourselves. Perfeggcionism freaks.",
     "description": "We don't take ourselves too seriously, but we're definitely serious about what we do. Yes, we love our egg puns and go all in, in our random, quirky creativity. All that while striving to deliver excellence in everything we do."
-  }
+  },
+  "HelpAndSupport": [
+    {
+      "title": "Mission and values.",
+      "description": "It's not just what we do. It's the why and the how we go about doing things. That's what matters.",
+      "href": "/",
+      "label": "Go to Mission"
+    },
+    {
+      "title": "Perks and benefits.",
+      "description": "We love nice things. This is the good stuff. And it's getting bigger and bigger.",
+      "href": "/",
+      "label": "Go to P&B"
+    },
+    {
+      "title": "Career plan.",
+      "description": "Your goals, your career. We're here to help you grow. Together.",
+      "href": "/",
+      "label": "Go to Career Plan"
+    }
+  ]
 }
