@@ -1,18 +1,20 @@
-import { BugAntIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/solid';
-import LinkIcon from '../../../components/LinkIcon';
-import NavItems from './components/NavItems';
+import Image from 'next/image';
 import classNames from 'classnames';
-
+import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid';
+import LinkIcon from '@components/LinkIcon';
+import logoIcon from '@assets/images/logo.svg';
+import NavItems from './components/NavItems';
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center">
-      <LinkIcon href="/">
-        <BugAntIcon
+    <nav className="flex justify-between items-center h-full">
+      <LinkIcon href="/" className="h-full">
+        <Image
+          src={logoIcon}
+          alt={'alt'}
+          width={48}
+          height={85}
           className={classNames(
-            'fill-primary',
-            'min-w-6 max-w-8',
-            'rotate-90 scale-125',
-            'hover:rotate-0 hover:scale-150 hover:transition hover:duration-700 hover:delay-100'
+            'hover:scale-125 hover:transition hover:duration-300 hover:delay-100'
           )}
         />
       </LinkIcon>

@@ -1,9 +1,11 @@
 import classNames from 'classnames';
-import { BugAntIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 import LinkIcon from '@components/LinkIcon';
 import Tagline from '@components/Tagline';
+import logoIcon from '@assets/images/logo.svg';
 import CopyRight from './components/CopyRight';
 import Menus from './components/Menus';
+
 const Footer = () => {
   return (
     <footer
@@ -25,13 +27,12 @@ const Footer = () => {
           </div>
           <div className="flex flex-col flex-1 gap-y-32">
             <LinkIcon href="/">
-              <BugAntIcon
-                className={classNames(
-                  'fill-primary',
-                  'min-w-6 max-w-8',
-                  'rotate-90 scale-125',
-                  'hover:rotate-0 hover:scale-150 hover:transition hover:duration-700 hover:delay-100'
-                )}
+              <Image
+                src={logoIcon}
+                alt={'icon_logo'}
+                width={64}
+                height={28}
+                className={classNames('scale-150')}
               />
             </LinkIcon>
             <Tagline size="medium" />
