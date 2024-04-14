@@ -1,9 +1,10 @@
 import type { AnchorHTMLAttributes, ReactNode } from 'react';
-export type LinkVariant = 'text' | 'outlined' | 'contained';
+export type LinkVariant = 'text' | 'outlined';
 export type LinkSize = 'small' | 'medium';
 export type LinkColor = 'primary' | 'secondary';
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href?: string;
+  title?: string;
   variant?: LinkVariant;
   color?: LinkColor;
   size?: LinkSize;

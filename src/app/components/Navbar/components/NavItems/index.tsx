@@ -5,7 +5,6 @@ import config from '@configs/app.json';
 
 const { NavbarItems } = config;
 const NavItems: FC<NavItemsProps> = () => {
-  // memos
   const items = useMemo(
     () =>
       NavbarItems?.map(({ href, title }, index) => (

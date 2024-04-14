@@ -10,9 +10,9 @@ const Link: FC<LinkProps> = ({
   href,
   externalUrl,
   target = '_self',
+  title,
   children,
 }) => {
-  const isVariantContained = variant === 'contained';
   const isVariantOutlined = variant === 'outlined';
   const isVariantText = variant === 'text';
   const isColorPrimary = color === 'primary';
@@ -27,13 +27,8 @@ const Link: FC<LinkProps> = ({
         'w-fit rounded-md',
         isSizeSmall && 'px-2 py-1',
         isSizeMedium && 'px-4 py-2',
-        (isVariantContained || isVariantOutlined) &&
-          'inline-flex items-center justify-center',
-        isVariantContained && [
-          'text-sm leading-4 border-2 border-solid border-transparent',
-          isColorPrimary && 'bg-primary',
-        ],
         isVariantOutlined && [
+          'inline-flex items-center justify-center',
           'text-sm leading-4 border-2 border-solid text-primary',
           isColorPrimary && 'border-light',
         ],
@@ -47,6 +42,7 @@ const Link: FC<LinkProps> = ({
         className
       )}
       href={href as string}
+      title={title}
       target={target}
     >
       {children}
