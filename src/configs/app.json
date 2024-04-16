@@ -67,37 +67,14 @@
   "Projects": [
     {
       "href": "/",
-      "title": "Passporte Natura 2000.",
-      "description": "How we gamified exploring the world.",
-      "icon": "https://a.storyblok.com/f/198185/1344x1008/561f9ba005/pnthumb1.jpg/m/1440x1080/",
+      "title": "Thought Fusion, Thought Defusion.",
+      "description": "Pay attention to where your attention goes.",
+      "icon": "https://i.ibb.co/RcnnK4q/dd1-1.webp",
+      "fetchPriority": "high",
       "awards": [
         {
           "title": "iF Design",
           "icon": "https://a.storyblok.com/f/198185/168x132/9f64598050/ifdesign.webp/m/120x0/"
-        },
-        {
-          "title": "European Design",
-          "icon": "https://a.storyblok.com/f/198185/112x88/c5732814c2/european-design-nominee-gold.png/m/120x0/"
-        },
-        {
-          "title": "German Design",
-          "icon": "https://a.storyblok.com/f/198185/168x132/3a615f33cf/gda-badge.png/m/120x0/"
-        }
-      ]
-    },
-    {
-      "href": "/",
-      "title": "Dia.",
-      "description": "An app to empower women in their fertility journey.",
-      "icon": "https://a.storyblok.com/f/198185/1600x1200/80012553aa/dia-thumb-03.jpg/m/1440x1080/",
-      "awards": [
-        {
-          "title": "iF Design",
-          "icon": "https://a.storyblok.com/f/198185/168x132/9f64598050/ifdesign.webp/m/120x0/"
-        },
-        {
-          "title": "European Design",
-          "icon": "https://a.storyblok.com/f/198185/112x88/c5732814c2/european-design-nominee-gold.png/m/120x0/"
         },
         {
           "title": "Good Design",
@@ -113,15 +90,42 @@
         }
       ]
     },
+
     {
       "href": "/",
-      "title": "Zoko.",
-      "description": "How we helped Zoko become a productivity powerhouse.",
-      "icon": "https://a.storyblok.com/f/198185/1601x1201/540dfeb209/zokothumb-1.jpg/m/1440x1080/",
+      "title": "Peachy keen, jelly bean!",
+      "description": "",
+      "icon": "https://i.ibb.co/k1zhQ6X/dd5-1.webp",
+      "fetchPriority": "auto",
       "awards": [
         {
           "title": "iF Design",
           "icon": "https://a.storyblok.com/f/198185/168x132/9f64598050/ifdesign.webp/m/120x0/"
+        },
+        {
+          "title": "European Design",
+          "icon": "https://a.storyblok.com/f/198185/112x88/c5732814c2/european-design-nominee-gold.png/m/120x0/"
+        },
+        {
+          "title": "German Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/3a615f33cf/gda-badge.png/m/120x0/"
+        }
+      ]
+    },
+    {
+      "href": "/",
+      "title": "Mi Amor.",
+      "description": "A Tail Of Two Voids. From Lust To Lack.",
+      "icon": "https://i.ibb.co/NShwqhv/dd6-1.webp",
+      "fetchPriority": "auto",
+      "awards": [
+        {
+          "title": "iF Design",
+          "icon": "https://a.storyblok.com/f/198185/168x132/9f64598050/ifdesign.webp/m/120x0/"
+        },
+        {
+          "title": "European Design",
+          "icon": "https://a.storyblok.com/f/198185/112x88/c5732814c2/european-design-nominee-gold.png/m/120x0/"
         },
         {
           "title": "Good Design",
