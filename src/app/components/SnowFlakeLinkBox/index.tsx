@@ -1,45 +1,47 @@
-import { FC } from 'react';
-import { ProjectLinkBoxProps } from './@types';
-import Image from 'next/image';
-import classNames from 'classnames';
-import NextLink from 'next/link';
 import Button from '@components/Button';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import classNames from 'classnames';
+import Image from 'next/image';
+import NextLink from 'next/link';
+import type { FC } from 'react';
+import type { SnowFlakeLinkBoxProps } from './@types';
 
-const ProjectLinkBox: FC<ProjectLinkBoxProps> = ({
+const SnowFlakeLinkBox: FC<SnowFlakeLinkBoxProps> = ({
   title,
   description,
   href,
   icon,
+  fetchPriority = 'auto',
   awards,
 }) => {
   return (
     <NextLink
       className={classNames(
-        'flex flex-col gap-y-8 group',
-        'lg:flex lg:flex-row-reverse',
-        'hover:transition-all hover:duration-300 hover:delay-100 hover:bg-overlayLinkHover hover:rounded-xl hover:pl-8'
+        'flex flex-col gap-y-8',
+        'lg:flex lg:flex-row-reverse lg:justify-between lg:even:flex-row',
+        'hover:transition-all hover:duration-300 hover:delay-100',
+        'hover:bg-overlayLinkHover hover:rounded-xl hover:odd:pl-8 lg:even:hover:pr-8'
       )}
       href={href}
       color="secondary"
     >
-      <div className="flex-1">
+      <div>
         <Image
-          src={String(icon)}
-          width={900}
-          height={621}
-          alt="icon_project"
-          className="rounded-xl hover:delay-200"
+          src={icon}
+          width={600}
+          height={600}
+          alt="ic_rand"
+          className="rounded-xl hover:delay-200 max-w-[600px] max-h-[600px]"
+          fetchPriority={fetchPriority}
         />
       </div>
-      <div className="flex flex-col py-4 flex-1 gap-y-8 lg:justify-between">
+      <div className="flex flex-col py-4 lg:justify-between">
         <div className="flex flex-col gap-y-16">
           <div className="flex flex-col gap-y-4">
-            <p className="text-3xl">
-              {title}
-              <br />
-              {description}
-            </p>
+            <div className="flex flex-col gap-y-4 mr-4">
+              <h5 className="text-3xl">{title}</h5>
+              <span className="text-lg font-light">{description}</span>
+            </div>
           </div>
           <div className="flex flex-wrap gap-x-16 gap-y-4">
             {awards.map(({ title, icon }) => (
@@ -48,12 +50,12 @@ const ProjectLinkBox: FC<ProjectLinkBoxProps> = ({
                 key={`project-${title.replaceAll(' ', '-')}`}
               >
                 <div className="w-full">
-                  <h4 className="text-light text-sm">AWARD</h4>
+                  <h4 className="text-light text-sm">SMR</h4>
                   <h4 className="text-primary text-sm">{title}</h4>
                 </div>
                 <div className="">
                   <Image
-                    src={String(icon)}
+                    src={icon}
                     alt="icon_card"
                     width={80}
                     height={30}
@@ -65,11 +67,11 @@ const ProjectLinkBox: FC<ProjectLinkBoxProps> = ({
           </div>
         </div>
         <Button variant="outlined" color="secondary" size="medium">
-          View Project
+          View
           <ArrowRightIcon className="ml-2 w-4 h-4" />
         </Button>
       </div>
     </NextLink>
   );
 };
-export default ProjectLinkBox;
+export default SnowFlakeLinkBox;

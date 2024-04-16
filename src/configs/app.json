@@ -64,7 +64,7 @@
       "icon": "https://a.storyblok.com/f/198185/3840x3840/18f579a475/diathumb.jpeg/m/200x160/"
     }
   ],
-  "Projects": [
+  "SnowFlakes": [
     {
       "href": "/",
       "title": "Thought Fusion, Thought Defusion.",
@@ -90,7 +90,6 @@
         }
       ]
     },
-
     {
       "href": "/",
       "title": "Peachy keen, jelly bean!",

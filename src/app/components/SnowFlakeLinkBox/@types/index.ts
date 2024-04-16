@@ -1,6 +1,7 @@
-import { ReactNode, AnchorHTMLAttributes } from 'react';
+import type { AnchorHTMLAttributes, ReactNode } from 'react';
 export type ProjectOverlayLinkAwards = { title: string; icon: string };
-export interface ProjectLinkBoxProps
+export type FetchPriority = 'auto' | 'high' | 'low';
+export interface SnowFlakeLinkBoxProps
   extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   title: string;
@@ -8,4 +9,5 @@ export interface ProjectLinkBoxProps
   awards: ProjectOverlayLinkAwards[];
   children?: ReactNode;
   icon: string;
+  fetchPriority: FetchPriority;
 }

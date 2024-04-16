@@ -3,13 +3,14 @@ import Tagline from '@components/Tagline';
 import config from '@configs/app.json';
 import classNames from 'classnames';
 import { randomUUID } from 'crypto';
-import ProjectLinkBox from 'src/app/components/ProjectLinkBox';
-import AboutUs from '../AboutUs';
-import Blog from '../Blog';
-import Service from '../Service';
-import Support from '../Support';
+import AboutUs from 'src/app/components/AboutUs';
+import Blog from 'src/app/components/Blog';
+import Service from 'src/app/components/Service';
+import SnowFlakeLinkBox from 'src/app/components/SnowFlakeLinkBox';
+import type { FetchPriority } from 'src/app/components/SnowFlakeLinkBox/@types';
+import Support from 'src/app/components/Support';
 
-const { BlogPosts, Projects, Services, AboutUs: AboutUsData } = config;
+const { BlogPosts, SnowFlakes, Services, AboutUs: AboutUsData } = config;
 const Home = () => {
   return (
     <div
@@ -47,16 +48,19 @@ const Home = () => {
           Snowflakes are real.
         </h3>
         <div className="flex flex-col gap-y-16">
-          {Projects.map(({ href, title, description, icon, awards }) => (
-            <ProjectLinkBox
-              key={`project-${title.replaceAll(' ', '-')}`}
-              href={href}
-              title={title}
-              description={description}
-              awards={awards}
-              icon={icon}
-            />
-          ))}
+          {SnowFlakes.map(
+            ({ href, title, description, icon, awards, fetchPriority }) => (
+              <SnowFlakeLinkBox
+                key={`project-${title.replaceAll(' ', '-')}`}
+                href={href}
+                title={title}
+                description={description}
+                awards={awards}
+                icon={icon}
+                fetchPriority={fetchPriority as FetchPriority}
+              />
+            )
+          )}
         </div>
       </section>
       <section
