@@ -1,16 +1,13 @@
-import Image from 'next/image';
-import classNames from 'classnames';
-import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid';
+import LogoIcon from '@assets/images/logo.svg';
 import LinkIcon from '@components/LinkIcon';
-import logoIcon from '@assets/images/logo.svg';
+import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid';
+import classNames from 'classnames';
 import NavItems from './components/NavItems';
 const Navbar = () => {
   return (
     <nav className="flex justify-between items-center h-full">
       <LinkIcon href="/" className="h-full">
-        <Image
-          src={logoIcon}
-          alt={'alt'}
+        <LogoIcon
           width={48}
           height={85}
           className={classNames(

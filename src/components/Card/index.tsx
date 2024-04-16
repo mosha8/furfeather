@@ -1,7 +1,7 @@
-import { FC } from 'react';
 import Link from '@components/Link';
-import { CardProps } from './@types';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import type { FC } from 'react';
+import type { CardProps } from './@types';
 
 const Card: FC<CardProps> = ({ title, description, label, href, children }) => {
   return (

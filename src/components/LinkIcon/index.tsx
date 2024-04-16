@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import classNames from 'classnames';
-import { FC } from 'react';
-import { LinkIconProps } from './@types';
+import Link from 'next/link';
+import type { FC } from 'react';
+import type { LinkIconProps } from './@types';
 
 const LinkIcon: FC<LinkIconProps> = ({ href, className, children }) => {
   return (

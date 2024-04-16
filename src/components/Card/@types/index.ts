@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 export interface CardProps extends PropsWithChildren {
   title?: string;

@@ -1,7 +1,8 @@
-import { FC, useMemo } from 'react';
 import Link from '@components/Link';
-import { NavItemsProps } from 'src/app/components/Navbar/@types';
 import config from '@configs/app.json';
+import type { FC } from 'react';
+import { useMemo } from 'react';
+import type { NavItemsProps } from 'src/app/components/Navbar/@types';
 
 const { NavbarItems } = config;
 const NavItems: FC<NavItemsProps> = () => {

@@ -1,8 +1,7 @@
-import classNames from 'classnames';
-import Image from 'next/image';
+import LogoIcon from '@assets/images/logo.svg';
 import LinkIcon from '@components/LinkIcon';
 import Tagline from '@components/Tagline';
-import logoIcon from '@assets/images/logo.svg';
+import classNames from 'classnames';
 import CopyRight from './components/CopyRight';
 import Menus from './components/Menus';
 
@@ -27,9 +26,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col flex-1 gap-y-32">
             <LinkIcon href="/">
-              <Image
-                src={logoIcon}
-                alt={'icon_logo'}
+              <LogoIcon
                 width={64}
                 height={28}
                 className={classNames('scale-150')}

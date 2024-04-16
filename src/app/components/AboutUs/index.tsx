@@ -1,7 +1,7 @@
 import Link from '@components/Link';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
-import { FC } from 'react';
-import { AboutUsProps } from './@types';
+import type { FC } from 'react';
+import type { AboutUsProps } from './@types';
 
 const AboutUs: FC<AboutUsProps> = ({ title, description }) => {
   return (

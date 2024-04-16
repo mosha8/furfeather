@@ -1,6 +1,6 @@
-import { FC } from 'react';
 import classNames from 'classnames';
-import { TaglineProps } from './@types';
+import type { FC } from 'react';
+import type { TaglineProps } from './@types';
 
 const Tagline: FC<TaglineProps> = ({ size = 'large' }) => {
   // Variables
@@ -20,19 +20,14 @@ const Tagline: FC<TaglineProps> = ({ size = 'large' }) => {
       <strong
         className={classNames('transition-all duration-300 ease-in delay-500')}
       >
-        Think, Design.
-      </strong>
-      <strong
-        className={classNames('transition-all duration-300 ease-in delay-1000')}
-      >
-        Develop, Release.
+        Do What Resonates
       </strong>
       <strong
         className={classNames(
           'transition-all duration-300 ease-in delay-[1500ms]'
         )}
       >
-        Repeat.
+        With you.
       </strong>
     </p>
   );

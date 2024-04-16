@@ -1,10 +1,10 @@
 import Button from '@components/Button';
-import { FC } from 'react';
-import { ServiceProps } from './@types';
-import Image from 'next/image';
-import { randomUUID } from 'crypto';
-import classNames from 'classnames';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import classNames from 'classnames';
+import { randomUUID } from 'crypto';
+import Image from 'next/image';
+import type { FC } from 'react';
+import type { ServiceProps } from './@types';
 const Service: FC<ServiceProps> = ({ title, description, icons }) => {
   return (
     <div
@@ -20,7 +20,7 @@ const Service: FC<ServiceProps> = ({ title, description, icons }) => {
             key={`icon-services-${randomUUID()})}`}
           >
             <Image
-              src={String(icon)}
+              src={icon}
               width={120}
               height={120}
               alt="icon_services"

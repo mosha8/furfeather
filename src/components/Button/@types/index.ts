@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 export type ButtonVariant = 'contained' | 'outlined';
 export type ButtonColor = 'primary' | 'secondary' | 'success' | 'error';
 export type ButtonSize = 'small' | 'medium';

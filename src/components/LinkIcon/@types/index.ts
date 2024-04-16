@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, ReactNode } from 'react';
+import type { AnchorHTMLAttributes, ReactNode } from 'react';
 
 export interface LinkIconProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;

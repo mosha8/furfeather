@@ -1,8 +1,8 @@
-import { LinkHTMLAttributes, ReactNode } from 'react';
+import type { LinkHTMLAttributes } from 'react';
 
 export interface LinkBoxProps extends LinkHTMLAttributes<HTMLAnchorElement> {
   href: string;
   title: string;
   source: string;
-  icon: ReactNode | string;
+  icon: string;
 }

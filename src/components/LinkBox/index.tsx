@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import { LinkBoxProps } from './@types';
+import classNames from 'classnames';
 import Image from 'next/image';
 import NextLink from 'next/link';
-import classNames from 'classnames';
+import type { FC } from 'react';
+import type { LinkBoxProps } from './@types';
 
 const LinkBox: FC<LinkBoxProps> = ({ href, title, source, icon, children }) => {
   return (
@@ -24,7 +24,7 @@ const LinkBox: FC<LinkBoxProps> = ({ href, title, source, icon, children }) => {
         </span>
       </div>
       <Image
-        src={String(icon)}
+        src={icon}
         alt="icon_card"
         width={100}
         height={80}

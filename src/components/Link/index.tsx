@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import NextLink from 'next/link';
 import classnames from 'classnames';
-import { LinkProps } from './@types';
+import NextLink from 'next/link';
+import type { FC } from 'react';
+import type { LinkProps } from './@types';
 const Link: FC<LinkProps> = ({
   variant = 'contained',
   color = 'primary',
@@ -25,6 +25,7 @@ const Link: FC<LinkProps> = ({
     <Component
       className={classnames(
         'w-fit rounded-md',
+        'active:text-yellow-500',
         isSizeSmall && 'px-2 py-1',
         isSizeMedium && 'px-4 py-2',
         isVariantOutlined && [

@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import { ButtonProps } from './@types';
 import classNames from 'classnames';
+import type { FC } from 'react';
+import type { ButtonProps } from './@types';
 
 const Button: FC<ButtonProps> = ({
   variant,
