@@ -6,10 +6,14 @@
     "ecmaVersion": "latest"
   },
   "extends": [
-    "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/strict",
     "eslint:recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "next/core-web-vitals",
+    "next",
+    "prettier"
   ],
   "plugins": [
     "testing-library",
@@ -17,6 +21,9 @@
     "no-relative-import-paths",
     "react"
   ],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": "error"
+  },
   "ignorePatterns": [
     "next.config.js",
     ".eslintrc.js",
