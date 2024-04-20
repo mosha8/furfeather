@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
 
 import '@styles/globals.css';
+import type { ReactNode } from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: 'BugAnt',
   description: 'BugAnt.com',
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{

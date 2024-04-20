@@ -4,13 +4,13 @@ import config from '@configs/app.json';
 import classNames from 'classnames';
 import { randomUUID } from 'crypto';
 import AboutUs from 'src/app/components/AboutUs';
+import ArticleLinkBox from 'src/app/components/ArticleLinkBox';
+import type { FetchPriority } from 'src/app/components/ArticleLinkBox/@types';
 import Blog from 'src/app/components/Blog';
 import Service from 'src/app/components/Service';
-import SnowFlakeLinkBox from 'src/app/components/SnowFlakeLinkBox';
-import type { FetchPriority } from 'src/app/components/SnowFlakeLinkBox/@types';
 import Support from 'src/app/components/Support';
 
-const { BlogPosts, SnowFlakes, Services, AboutUs: AboutUsData } = config;
+const { BlogPosts, Articles, Services, AboutUs: AboutUsData } = config;
 const Home = () => {
   return (
     <div
@@ -45,12 +45,12 @@ const Home = () => {
         )}
       >
         <h3 className={classNames('font-medium text-4xl lg:text-5xl')}>
-          Snowflakes are real.
+          Articles
         </h3>
-        <div className="flex flex-col gap-y-16">
-          {SnowFlakes.map(
+        <div className="flex flex-col gap-y-16 lg:gap-y-28 w-full">
+          {Articles.map(
             ({ href, title, description, icon, awards, fetchPriority }) => (
-              <SnowFlakeLinkBox
+              <ArticleLinkBox
                 key={`project-${title.replaceAll(' ', '-')}`}
                 href={href}
                 title={title}

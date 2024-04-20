@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import type { FC } from 'react';
-import type { SnowFlakeLinkBoxProps } from './@types';
+import type { ArticleLinkBoxProps } from './@types';
 
-const SnowFlakeLinkBox: FC<SnowFlakeLinkBoxProps> = ({
+const ArticleLinkBox: FC<ArticleLinkBoxProps> = ({
   title,
   description,
   href,
@@ -17,26 +17,29 @@ const SnowFlakeLinkBox: FC<SnowFlakeLinkBoxProps> = ({
   return (
     <NextLink
       className={classNames(
-        'flex flex-col gap-y-8',
-        'lg:flex lg:flex-row-reverse lg:justify-between lg:even:flex-row',
-        'hover:transition-all hover:duration-300 hover:delay-100',
-        'hover:bg-overlayLinkHover hover:rounded-xl hover:odd:pl-8 lg:even:hover:pr-8'
+        'flex flex-col gap-y-8 group',
+        'lg:flex lg:flex-row-reverse lg:justify-between lg:even:flex-row lg:gap-x-8',
+        'hover:bg-overlayLinkHover hover:rounded-xl'
       )}
       href={href}
       color="secondary"
     >
-      <div>
+      <div className="flex-1">
         <Image
           src={icon}
           width={600}
           height={600}
           alt="ic_rand"
-          className="rounded-xl hover:delay-200 max-w-[600px] max-h-[600px]"
+          className={classNames('w-full h-[600px] rounded-xl')}
           fetchPriority={fetchPriority}
         />
       </div>
-      <div className="flex flex-col py-4 lg:justify-between">
-        <div className="flex flex-col gap-y-16">
+      <div
+        className={classNames(
+          'flex-1 flex flex-col gap-y-16 p-4 lg:justify-between'
+        )}
+      >
+        <div className="flex flex-col gap-y-8">
           <div className="flex flex-col gap-y-4">
             <div className="flex flex-col gap-y-4 mr-4">
               <h5 className="text-3xl">{title}</h5>
@@ -50,7 +53,7 @@ const SnowFlakeLinkBox: FC<SnowFlakeLinkBoxProps> = ({
                 key={`project-${title.replaceAll(' ', '-')}`}
               >
                 <div className="w-full">
-                  <h4 className="text-light text-sm">SMR</h4>
+                  <h4 className="text-light text-sm">Award</h4>
                   <h4 className="text-primary text-sm">{title}</h4>
                 </div>
                 <div className="">
@@ -66,12 +69,21 @@ const SnowFlakeLinkBox: FC<SnowFlakeLinkBoxProps> = ({
             ))}
           </div>
         </div>
-        <Button variant="outlined" color="secondary" size="medium">
-          View
-          <ArrowRightIcon className="ml-2 w-4 h-4" />
-        </Button>
+        <div className="w-full relative">
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="medium"
+            className={classNames(
+              'absolute lg:group-even:right-0 lg:bottom-2 bottom-1'
+            )}
+          >
+            View
+            <ArrowRightIcon className="ml-2 w-4 h-4" />
+          </Button>
+        </div>
       </div>
     </NextLink>
   );
 };
-export default SnowFlakeLinkBox;
+export default ArticleLinkBox;
