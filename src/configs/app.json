@@ -1,21 +1,16 @@
 {
   "NavbarItems": [
-    { "title": "Projects", "href": "/projects" },
-    { "title": "Services", "href": "/services" },
-    { "title": "About", "href": "/about" },
-    { "title": "Handbook", "href": "/handbook" }
+    { "title": "Home", "href": "/" },
+    { "title": "Articles", "href": "/articles" },
+    { "title": "About", "href": "/about" }
   ],
   "FooterMenu": [
     {
       "label": "Navigation",
       "values": [
         { "title": "Home", "href": "/" },
-        { "title": "Projects", "href": "/projects" },
-        { "title": "Services", "href": "/services" },
-        { "title": "About", "href": "/about" },
-        { "title": "Blog", "href": "/blog" },
-        { "title": "Careers", "href": "/careers" },
-        { "title": "Contact Us", "href": "/contact-us" }
+        { "title": "Articles", "href": "/articles" },
+        { "title": "About", "href": "/about" }
       ]
     },
     {
@@ -31,37 +26,36 @@
     {
       "label": "Follow Us",
       "values": [
-        { "title": "Instagram", "href": "/" },
-        { "title": "Dribble", "href": "/projects" },
-        { "title": "LinkedIn", "href": "/services" },
-        { "title": "Behance", "href": "/about" }
+        { "title": "Instagram", "href": "https://instagram.com" },
+        { "title": "Bluesky", "href": "https://bluesky.social" },
+        { "title": "Mastadan", "href": "https://mastadan.social" }
       ]
     }
   ],
-  "BlogPosts": [
+  "Posts": [
     {
       "href": "/",
-      "title": "Hey Harper. Redesigning the e-commerce experience.",
-      "source": "blog",
-      "icon": "https://a.storyblok.com/f/198185/3200x2400/59afcdf31e/heythumb2.jpg/m/200x160/"
+      "title": "When the treaty of Rome was signed in 1957, the foundation was laid for a new 'continent'.",
+      "source": "article",
+      "icon": "https://unsplash.com/photos/1W1VSHDCZiQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzR8fGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3MTM2MTY3OTR8MA&force=true&w=640"
     },
     {
       "href": "/",
       "title": "Small Step, Big Impact. Partnered with 1% for the planet.",
-      "source": "blog",
-      "icon": "https://a.storyblok.com/f/198185/3840x1920/7f28832b1e/1-planet-cover.jpg/m/200x160/"
+      "source": "article",
+      "icon": "https://unsplash.com/photos/AgdkUyesz8Y/download?ixid=M3wxMjA3fDB8MXxhbGx8MTl8fHx8fHwyfHwxNzEzNjE2OTUwfA&force=true&w=640"
     },
     {
       "href": "/",
       "title": "all0. Supercharging restaurants.",
-      "source": "projects",
-      "icon": "https://a.storyblok.com/f/198185/2016x1512/c83505ff60/allo-thumbnail-01.png/m/200x160/"
+      "source": "article",
+      "icon": "https://unsplash.com/photos/IkERcGR_n2M/download?ixid=M3wxMjA3fDB8MXxhbGx8MjR8fHx8fHwyfHwxNzEzNjE2OTUwfA&force=true&w=640"
     },
     {
       "href": "/",
       "title": "Dia. An app to empower women in their fertility journey.",
-      "source": "projects",
-      "icon": "https://a.storyblok.com/f/198185/3840x3840/18f579a475/diathumb.jpeg/m/200x160/"
+      "source": "article",
+      "icon": "https://unsplash.com/photos/Z47Mpu01Na4/download?ixid=M3wxMjA3fDB8MXx0b3BpY3x8V2RDaHFsc0pOOWN8fHx8fDJ8fDE3MTM2MTc5MTB8&force=true&w=640"
     }
   ],
   "Articles": [
@@ -174,6 +168,22 @@
       "description": "Your goals, your career. We're here to help you grow. Together.",
       "href": "/",
       "label": "Go to Career Plan"
+    }
+  ],
+  "APIOptionsConfig": [
+    {
+      "url": "https://dog.ceo/api/",
+      "server": "DOGS_API"
+    }
+  ],
+  "ArticlesPageSidebarItems": [
+    {
+      "label": "Dogs API",
+      "value": "dogs"
+    },
+    {
+      "label": "Cats API",
+      "value": "cats"
     }
   ]
 }
