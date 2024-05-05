@@ -6,6 +6,7 @@ const Button: FC<ButtonProps> = ({
   variant,
   color,
   size,
+  active = false,
   className,
   onClick,
   disabled,
@@ -13,12 +14,14 @@ const Button: FC<ButtonProps> = ({
 }) => {
   const isVariantContained = variant === 'contained';
   const isVariantOutlined = variant === 'outlined';
+  const isVariantText = variant === 'text';
   const isColorPrimary = color === 'primary';
   // const isColorSecondary = color === 'secondary';
   // const isColorSuccess = color === 'success';
   // const isColorError = color === 'error';
   const isSizeSmall = size === 'small';
   const isSizeMedium = size === 'medium';
+  const isButtonActive = active === true;
 
   return (
     <button
@@ -36,6 +39,7 @@ const Button: FC<ButtonProps> = ({
           'text-sm leading-4 border-2 border-solid text-primary',
           isColorPrimary && 'border-light',
         ],
+        isVariantText && [isButtonActive && 'border-b-2  rounded-none'],
         disabled && 'cursor-not-allowed',
         className
       )}

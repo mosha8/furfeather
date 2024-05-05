@@ -3,7 +3,8 @@ export type LinkVariant = 'text' | 'outlined';
 export type LinkSize = 'small' | 'medium';
 export type LinkColor = 'primary' | 'secondary';
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  href?: string;
+  href: string;
+  active?: boolean;
   title?: string;
   variant?: LinkVariant;
   color?: LinkColor;

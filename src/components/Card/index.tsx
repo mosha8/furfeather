@@ -1,27 +1,45 @@
-import Link from '@components/Link';
-import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import classNames from 'classnames';
+import Image from 'next/image';
 import type { FC } from 'react';
 import type { CardProps } from './@types';
+import CardBody from './components/CardBody';
+import CardFooter from './components/CardFooter';
+import CardHeader from './components/CardHeader';
 
-const Card: FC<CardProps> = ({ title, description, label, href, children }) => {
+const Card: FC<CardProps> = ({
+  src,
+  title,
+  description,
+  label,
+  href,
+  children,
+  className,
+}) => {
+  const ImageComponent = src ? (
+    <Image
+      width={200}
+      height={300}
+      src={src}
+      alt="card-image"
+      className="w-full h-[350px] rounded-t-lg"
+    />
+  ) : null;
   return (
-    <div className=" bg-background flex flex-col justify-between gap-y-16 py-8">
+    <div
+      className={classNames(
+        ' bg-background flex flex-col justify-between gap-y-16 rounded-lg z-10',
+        src ? 'pb-8' : 'py-8',
+        className
+      )}
+    >
       <div className="space-y-8">
-        {title ? (
-          <h5 className="text-xl font-medium lg:text-3xl leading-relaxed">
-            {title}
-          </h5>
-        ) : null}
-        {description ? (
-          <p className="font-light text-light">{description}</p>
-        ) : null}
+        {ImageComponent && <div className="w-full">{ImageComponent}</div>}
+        <div className="space-y-2">
+          <CardHeader>{title}</CardHeader>
+          <CardBody>{description}</CardBody>
+        </div>
       </div>
-      {href && label ? (
-        <Link variant="outlined" size="medium" href={href}>
-          {label}
-          <ArrowRightIcon className="ml-2 w-4 h-4" />
-        </Link>
-      ) : null}
+      {href && label && <CardFooter href={href} label={label} />}
       {children}
     </div>
   );

@@ -6,6 +6,7 @@ const Link: FC<LinkProps> = ({
   variant = 'contained',
   color = 'primary',
   size = 'medium',
+  active = false,
   className,
   href,
   externalUrl,
@@ -19,13 +20,13 @@ const Link: FC<LinkProps> = ({
   const isColorSecondary = color === 'secondary';
   const isSizeMedium = size === 'medium';
   const isSizeSmall = size === 'small';
+  const isLinkActive = active === true;
   const Component = externalUrl ? 'a' : NextLink;
 
   return (
     <Component
       className={classnames(
         'w-fit rounded-md',
-        'active:text-yellow-500',
         isSizeSmall && 'px-2 py-1',
         isSizeMedium && 'px-4 py-2',
         isVariantOutlined && [
@@ -35,6 +36,7 @@ const Link: FC<LinkProps> = ({
         ],
         isVariantText && [
           'relative',
+          isLinkActive && 'link-active',
           isColorPrimary && 'text-primary',
           isColorSecondary && 'text-light',
           isSizeMedium && 'link-underline-md',
