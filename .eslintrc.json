@@ -13,16 +13,24 @@
     "plugin:prettier/recommended",
     "next/core-web-vitals",
     "next",
-    "prettier"
+    "prettier",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
   "plugins": [
     "testing-library",
     "@typescript-eslint",
     "no-relative-import-paths",
-    "react"
+    "react",
+    "@tanstack/query"
   ],
   "rules": {
-    "@typescript-eslint/consistent-type-imports": "error"
+    "@typescript-eslint/consistent-type-imports": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/no-rest-destructuring": "error",
+    "@tanstack/query/stable-query-client": "error",
+    "@typescript-eslint/no-invalid-void-type": "error"
   },
   "ignorePatterns": [
     "next.config.js",
