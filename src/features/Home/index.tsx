@@ -3,14 +3,14 @@ import Tagline from '@components/Tagline';
 import config from '@configs/app.json';
 import classNames from 'classnames';
 import { randomUUID } from 'crypto';
-import AboutUs from 'src/app/components/AboutUs';
-import ArticleLinkBox from 'src/app/components/ArticleLinkBox';
-import type { FetchPriority } from 'src/app/components/ArticleLinkBox/@types';
-import Blog from 'src/app/components/Blog';
-import Service from 'src/app/components/Service';
-import Support from 'src/app/components/Support';
+import AboutUs from 'src/features/Home/components/AboutUs';
+import ArticleLinkBox from 'src/features/Home/components/ArticleLinkBox';
+import type { FetchPriority } from 'src/features/Home/components/ArticleLinkBox/@types';
+import Blog from 'src/features/Home/components/Blog';
+import Service from 'src/features/Home/components/Service';
+import Support from 'src/features/Home/components/Support';
 
-const { BlogPosts, Articles, Services, AboutUs: AboutUsData } = config;
+const { Posts, Articles, Services, AboutUs: AboutUsData } = config;
 const Home = () => {
   return (
     <div
@@ -28,9 +28,9 @@ const Home = () => {
           'md:flex-row md:gap-x-16 md:flex-wrap'
         )}
       >
-        {BlogPosts.map(({ href, title, source, icon }) => (
+        {Posts.map(({ href, title, source, icon }) => (
           <LinkBox
-            key={`blogPost-overlayLink-${href}`}
+            key={`post-linkBox-${source}`}
             href={href}
             title={title}
             source={source}

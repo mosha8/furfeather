@@ -1,4 +1,4 @@
-import Navbar from 'src/app/components/Navbar';
+import Navbar from '@features/Navbar';
 import classNames from 'classnames';
 
 const Header = () => {
