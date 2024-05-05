@@ -48,7 +48,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'i.ibb.co',
+        hostname: 'unsplash.com',
         pathname: '/**',
       },
     ],

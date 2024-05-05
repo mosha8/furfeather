@@ -22,7 +22,7 @@ const config: Config = {
         nav: '26px',
       },
       width: {
-        '105': '420px',
+        '420': '420px',
       },
       height: {
         '1.5': '1.5px',
