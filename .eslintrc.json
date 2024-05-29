@@ -3,7 +3,10 @@
   "parserOptions": {
     "project": ["./tsconfig.json"],
     "sourceType": "module",
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "extends": [
     "plugin:@typescript-eslint/recommended",
@@ -30,7 +33,13 @@
     "@tanstack/query/exhaustive-deps": "error",
     "@tanstack/query/no-rest-destructuring": "error",
     "@tanstack/query/stable-query-client": "error",
-    "@typescript-eslint/no-invalid-void-type": "error"
+    "@typescript-eslint/no-invalid-void-type": "error",
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ]
   },
   "ignorePatterns": [
     "next.config.js",

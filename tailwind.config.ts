@@ -17,6 +17,7 @@ const config: Config = {
         light: '#A0A0A2', // non-decorative borders
         navItemUnderline: '#4E4E4E',
         overlayLinkHover: '#242424',
+        selectOptionBackground: '#242424',
       },
       lineHeight: {
         nav: '26px',
