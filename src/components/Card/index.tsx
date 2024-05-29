@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import Image from 'next/image';
-import type { FC } from 'react';
+import { useMemo, type FC } from 'react';
 import type { CardProps } from './@types';
 import CardBody from './components/CardBody';
 import CardFooter from './components/CardFooter';
 import CardHeader from './components/CardHeader';
 
 const Card: FC<CardProps> = ({
-  src,
+  image,
   title,
   description,
   label,
@@ -15,31 +15,45 @@ const Card: FC<CardProps> = ({
   children,
   className,
 }) => {
-  const ImageComponent = src ? (
-    <Image
-      width={200}
-      height={300}
-      src={src}
-      alt="card-image"
-      className="w-full h-[350px] rounded-t-lg"
-    />
-  ) : null;
+  // memos
+  const ImageComponent = useMemo(
+    () =>
+      image ? (
+        <Image
+          width={250}
+          height={250}
+          src={image}
+          alt="card-image"
+          className="w-full h-[250px] rounded-t-lg"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcuHDVfwAGxALtfbZXhQAAAABJRU5ErkJggg=="
+        />
+      ) : null,
+    [image]
+  );
   return (
     <div
       className={classNames(
-        ' bg-background flex flex-col justify-between gap-y-16 rounded-lg z-10',
-        src ? 'pb-8' : 'py-8',
+        'flex flex-col gap-y-16 rounded-lg h-full min-w-[250px] py-8',
+        image && 'pt-0 pb-8',
         className
       )}
     >
-      <div className="space-y-8">
-        {ImageComponent && <div className="w-full">{ImageComponent}</div>}
-        <div className="space-y-2">
-          <CardHeader>{title}</CardHeader>
-          <CardBody>{description}</CardBody>
+      <div
+        className={classNames(
+          'h-full flex flex-col justify-around',
+          image && ['border border-medium shadow-lg rounded-lg pb-8']
+        )}
+      >
+        <div className="space-y-8">
+          {ImageComponent}
+          <div className="space-y-6">
+            {title && <CardHeader>{title}</CardHeader>}
+            {description && <CardBody>{description}</CardBody>}
+          </div>
         </div>
+        {href && label && <CardFooter href={href} label={label} />}
       </div>
-      {href && label && <CardFooter href={href} label={label} />}
       {children}
     </div>
   );

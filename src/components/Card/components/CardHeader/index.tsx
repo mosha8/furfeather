@@ -3,7 +3,7 @@ import type { FC } from 'react';
 
 const CardHeader: FC<CardHeaderProps> = ({ children }) => {
   return (
-    <h5 className="text-xl font-medium lg:text-3xl leading-relaxed px-4">
+    <h5 className="text-lg font-medium lg:text-2xl leading-relaxed px-4">
       {children}
     </h5>
   );

@@ -5,7 +5,7 @@ export interface CardProps extends PropsWithChildren {
   description?: string;
   label?: string;
   href?: string;
-  src?: string;
+  image?: string;
   className?: string;
 }
 
