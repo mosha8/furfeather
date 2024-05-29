@@ -44,7 +44,7 @@ const Link: FC<LinkProps> = ({
         ],
         className
       )}
-      href={href as string}
+      href={href}
       title={title}
       target={target}
     >
