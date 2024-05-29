@@ -1,7 +1,8 @@
 import type { PropsWithChildren } from 'react';
 
-export interface PaginationProps extends PropsWithChildren {}
-export interface PaginationContentProps extends PropsWithChildren {}
-export interface PaginationItemProps extends PropsWithChildren {
-  type?: 'previous' | 'ellipsis' | 'next';
+export interface PaginationProps extends PropsWithChildren {
+  total: number;
+  pageCurrent: number;
+  pageSize: number;
+  goToPage: (page: number) => void;
 }
