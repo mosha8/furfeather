@@ -1,16 +1,14 @@
 {
   "NavbarItems": [
     { "title": "Home", "href": "/" },
-    { "title": "Articles", "href": "/articles" },
-    { "title": "About", "href": "/about" }
+    { "title": "Explore", "href": "/explore" }
   ],
   "FooterMenu": [
     {
       "label": "Navigation",
       "values": [
         { "title": "Home", "href": "/" },
-        { "title": "Articles", "href": "/articles" },
-        { "title": "About", "href": "/about" }
+        { "title": "Explore", "href": "/explore" }
       ]
     },
     {
@@ -173,16 +171,16 @@
   "APIOptionsConfig": [
     {
       "url": "https://dog.ceo/api/",
-      "server": "DOGS_API"
+      "server": "DOGS"
     }
   ],
   "ArticlesPageSidebarItems": [
     {
-      "label": "Dogs API",
+      "label": "Dogs",
       "value": "dogs"
     },
     {
-      "label": "Cats API",
+      "label": "Cats",
       "value": "cats"
     }
   ]
