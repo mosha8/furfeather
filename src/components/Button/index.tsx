@@ -10,19 +10,16 @@ const Button: FC<ButtonProps> = ({
   className,
   onClick,
   disabled,
+  type,
   children,
 }) => {
   const isVariantContained = variant === 'contained';
   const isVariantOutlined = variant === 'outlined';
   const isVariantText = variant === 'text';
   const isColorPrimary = color === 'primary';
-  // const isColorSecondary = color === 'secondary';
-  // const isColorSuccess = color === 'success';
-  // const isColorError = color === 'error';
   const isSizeSmall = size === 'small';
   const isSizeMedium = size === 'medium';
   const isButtonActive = active === true;
-
   return (
     <button
       className={classNames(
@@ -34,16 +31,21 @@ const Button: FC<ButtonProps> = ({
         isVariantContained && [
           'text-sm leading-4 border-2 border-solid border-transparent',
           isColorPrimary && 'bg-primary',
+          'hover:outline hover:outline-2 hover:outline-yellow-500',
         ],
         isVariantOutlined && [
           'text-sm leading-4 border-2 border-solid text-primary',
           isColorPrimary && 'border-light',
         ],
-        isVariantText && [isButtonActive && 'border-b-2  rounded-none'],
-        disabled && 'cursor-not-allowed',
+        isVariantText && [
+          isColorPrimary && 'text-primary',
+          isButtonActive && 'border-b-2 rounded-none',
+        ],
+        disabled && 'cursor-not-allowed opacity-70',
         className
       )}
       onClick={onClick}
+      type={type}
       disabled={!!disabled}
     >
       {children}
