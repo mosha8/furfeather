@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-
-import '@styles/globals.css';
 import type { ReactNode } from 'react';
-import Footer from './components/Footer';
-import Header from './components/Header';
+
+import Footer from '@features/Footer';
+import Header from '@features/Header';
+import ClientProvider from '@lib/query-client/provider';
+import '@styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'BugAnt',
@@ -18,7 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-background">
         <Header />
-        <main>{children}</main>
+        <main>
+          <ClientProvider>{children}</ClientProvider>
+        </main>
         <Footer />
       </body>
     </html>
