@@ -116,7 +116,6 @@ const DogCardsLayout: FC<CardLayoutDogsProps> = ({ dogBreeds, filter }) => {
 
   const onPaginationGoToPage = useCallback((page: number) => {
     setPage(page);
-    setLoading(true);
   }, []);
 
   const DogCardsLayoutSkeleton = useMemo(() => {
