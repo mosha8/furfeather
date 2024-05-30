@@ -69,7 +69,7 @@ const Explore = () => {
 
   return (
     <div className="flex gap-x-16 mr-16 h-full">
-      <div>
+      <div className="hidden lg:block">
         <Sidebar
           items={ArticlesPageSidebarItems as SidebarItem[]}
           queryAPI={urlQueryAPI}
@@ -77,7 +77,7 @@ const Explore = () => {
         />
       </div>
       {urlQueryAPI === 'dogs' && (
-        <div className="flex flex-col mt-16 gap-y-8 w-full">
+        <div className="flex flex-col mt-16 gap-y-8 w-full mx-10">
           <div className="border border-medium shadow-lg rounded-lg p-8">
             <FormDogsFilter
               dogsBreedItems={dogBreedsAllItems}

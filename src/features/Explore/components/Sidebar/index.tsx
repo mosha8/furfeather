@@ -36,7 +36,7 @@ const Sidebar: FC<SidebarProps> = ({ items, queryAPI, onChange }) => {
     }
   }, [search, sidebarItem, onChange]);
   return (
-    <div className="w-[300px] h-full relative z-5 hidden lg:block">
+    <div className="w-[300px] h-full relative z-5">
       <div className="w-full absolute top-0 left-0 bottom-0 border-r-2 border-medium">
         <div className="py-16 flex gap-x-2 border-medium border-b-2 justify-center h-fit">
           <Squares2X2Icon className="h-4 scale-125 fill-primary" />
