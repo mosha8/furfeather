@@ -48,8 +48,8 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'unsplash.com',
-        pathname: '/**',
+        hostname: 'randomwordgenerator.com',
+        pathname: '/img/picture-generator/**',
       },
     ],
   },

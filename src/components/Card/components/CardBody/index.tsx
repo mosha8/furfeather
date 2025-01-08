@@ -1,7 +1,6 @@
-import type { CardBodyProps } from '@components/Card/@types';
-import type { FC } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 
-const CardBody: FC<CardBodyProps> = ({ children }) => {
+const CardBody: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <p className="font-light text-light px-4">{children}</p>

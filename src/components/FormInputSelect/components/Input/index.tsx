@@ -16,14 +16,14 @@ const Input: FC<InputSelectProps> = ({
   disabled,
 }) => {
   // states
-  const [selectValue, SetSelectValue] = useState<InputSelectItem | null>();
+  const [selectValue, setSelectValue] = useState<InputSelectItem | null>();
   // effects
   useEffect(() => {
     if (value) {
       const newValue = items.find((item) => value === item.value);
-      SetSelectValue(newValue);
+      setSelectValue(newValue);
     } else {
-      SetSelectValue(null);
+      setSelectValue(null);
     }
   }, [value, items]);
 
@@ -50,7 +50,7 @@ const Input: FC<InputSelectProps> = ({
         }}
         options={items}
         onChange={(newValue) => {
-          SetSelectValue(newValue as InputSelectItem);
+          setSelectValue(newValue as InputSelectItem);
           onChange(newValue ? newValue.value : undefined);
         }}
         placeholder={placeholder}
