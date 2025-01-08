@@ -12,7 +12,6 @@ export interface CardProps extends PropsWithChildren {
 export interface CardHeaderProps extends PropsWithChildren {
   src?: string;
 }
-export interface CardBodyProps extends PropsWithChildren {}
 export interface CardFooterProps extends PropsWithChildren {
   href: string;
   label?: string;

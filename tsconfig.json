@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
@@ -27,14 +31,29 @@
       }
     ],
     "paths": {
-      "@/*": ["src/"],
-      "@components/*": ["src/components/*"],
-      "@features/*": ["src/features/*"],
-      "@lib/*": ["src/lib/*"],
-      "@assets/*": ["src/assets/*"],
-      "@configs/*": ["src/configs/*"],
-      "@styles/*": ["src/styles/*"]
-    }
+      "@/*": [
+        "src/"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@features/*": [
+        "src/features/*"
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@configs/*": [
+        "src/configs/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ]
+    },
+    "target": "ES2017"
   },
   "include": [
     "custom.d.ts",
@@ -44,5 +63,7 @@
     ".next/types/**/*.ts",
     "src/**/*?d.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

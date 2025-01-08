@@ -20,5 +20,9 @@ Client.registerEndpoint<RequestData, ResponseData>(keyGenerator, {
   url: `/breed/list/all`,
   method: 'GET',
 });
-export { keyGenerator as dogKeyGenerator };
+export {
+  keyGenerator as dogKeyGenerator,
+  requestDataSchema as dogsBreedListRequestData,
+  responseDataSchema as dogsBreedListResponseData,
+};
 export type { RequestData as DOGRequestData, ResponseData as DOGResponseData };

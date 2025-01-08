@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer
       className={classNames(
-        'w-full',
+        'w-full h-[533px]',
         'md:px-20 px-12 pt-20 pb-3',
         'border-t border-t-medium'
       )}

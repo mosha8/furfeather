@@ -1,4 +1,4 @@
-import Client from '@lib/query-client';
+import client from '@lib/query-client';
 import type { QueryKeyGenerator } from '@lib/query-client/@types';
 import { z } from 'zod';
 import type { DogsBreedAll } from '../@types';
@@ -17,11 +17,15 @@ const keyGenerator: QueryKeyGenerator<RequestData> = (data) => [
   'all',
   data,
 ];
-Client.registerEndpoint<RequestData, ResponseData>(keyGenerator, {
+client.registerEndpoint<RequestData, ResponseData>(keyGenerator, {
   type: 'query',
   server: 'DOGS',
   url: '/breeds/list/all',
   method: 'GET',
 });
-export { keyGenerator as dogsBreedListAllKeyGenerator };
+export {
+  requestDataSchema as dogsBreadRequestData,
+  responseDataSchema as dogsBreadResponseData,
+  keyGenerator as dogsBreedListAllKeyGenerator,
+};
 export type { RequestData as DOGRequestData, ResponseData as DOGResponseData };
