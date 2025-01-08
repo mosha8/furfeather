@@ -1,5 +1,5 @@
-# nextjs-typescript-react-website
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It's built with Typescript, React, and Tailwind CSS. 
+# Introduction
+furfeather is a Nextjs app that you can search to explore images of dogs and cats.
 ## Prerequisites
 To run this project please ensure that you have [nodejs](https://nodejs.org) (v18.7 or above) installed.
 ## Installation

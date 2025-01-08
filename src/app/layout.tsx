@@ -7,8 +7,8 @@ import ClientProvider from '@lib/query-client/provider';
 import '@styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'snowflakes',
-  description: 'snowflakes.com',
+  title: 'furfeather',
+  description: 'furfeather.com',
 };
 export default function RootLayout({
   children,
